@@ -1,5 +1,10 @@
 import os
 import sys
+from . import tictactoe
+from . import chess as chess_module
+from . import sudoku
+from . import adventure
+
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -39,7 +44,6 @@ def launch_game(choice):
     if choice == '1':
         print("Launching Tic-Tac-Toe...\n")
         try:
-            import tictactoe
             tictactoe.main()
         except ImportError:
             print("Error: tictactoe.py not found!")
@@ -49,29 +53,13 @@ def launch_game(choice):
     elif choice == '2':
         print("Launching Chess...\n")
         try:
-            import chess as chess_module
-            if not hasattr(chess_module, 'Board'):
-                print("Error: python-chess library not installed!")
-                print("Install it with: pip install python-chess")
-                input("\nPress Enter to continue...")
-                return
-        except ImportError:
-            print("Error: python-chess library not installed!")
-            print("Install it with: pip install python-chess")
-            input("\nPress Enter to continue...")
-            return
-        
-        try:
-            # Import the local chess.py file
-            import chess as local_chess
-            local_chess.main()
+            chess_module.main()
         except Exception as e:
             print(f"Error launching Chess: {e}")
     
     elif choice == '3':
         print("Launching Sudoku...\n")
         try:
-            import sudoku
             sudoku.main()
         except ImportError:
             print("Error: sudoku.py not found!")
@@ -79,19 +67,8 @@ def launch_game(choice):
             print(f"Error launching Sudoku: {e}")
     
     elif choice == '4':
-        print("Launching Battleship...\n")
-        try:
-            import battleship
-            battleship.main()
-        except ImportError:
-            print("Error: battleship.py not found!")
-        except Exception as e:
-            print(f"Error launching Battleship: {e}")
-    
-    elif choice == '5':
         print("Launching Text Adventure...\n")
         try:
-            import adventure
             adventure.main()
         except ImportError:
             print("Error: adventure.py not found!")

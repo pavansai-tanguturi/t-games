@@ -21,13 +21,7 @@ A collection of classic games playable in your terminal, built with Python.
 - **Hard** - 60 cells removed
 - Hints and solution viewer available
 
-### 4. Battleship 🚢
-- Classic naval combat game
-- Place your ships strategically
-- Sink all enemy ships to win
-- Side-by-side board display
-
-### 5. Text Adventure 🗡️
+### 4. Text Adventure 🗡️
 - Interactive fiction game
 - Explore a fantasy world
 - Solve puzzles and defeat enemies
@@ -43,7 +37,12 @@ Install the package using pip:
 pip install t-games
 ```
 
-That's it! All dependencies will be installed automatically.
+To ensure you have the latest version:
+```bash
+pip install --upgrade t-games
+```
+
+That's it! All dependencies (including `python-chess` for the Chess game) will be installed automatically.
 
 ### Running the Games
 
@@ -56,10 +55,10 @@ games
 #### Direct Game Launch
 Run individual games directly:
 ```bash
-tictactoe       # Tic-Tac-Toe
-chess-game      # Chess
-sudoku-game     # Sudoku
-adventure-game  # Text Adventure
+tictactoe       # Launch Tic-Tac-Toe directly
+chess-game      # Launch Chess directly
+sudoku-game     # Launch Sudoku directly
+adventure-game  # Launch Text Adventure directly
 ```
 
 ### Development Installation
@@ -110,11 +109,6 @@ pip install -e .
 - `solution` - View the complete solution
 - `new <difficulty>` - Start a new game (easy/medium/hard)
 - `quit` - Exit game
-
-### Battleship
-- Place your ships on the grid
-- Enter coordinates to fire at enemy ships
-- First to sink all enemy ships wins
 
 ### Text Adventure
 **Common Commands:**
@@ -187,10 +181,11 @@ All dependencies are managed automatically when you install via pip.
 
 ```
 t-games/
-├── t-games/          # Main package directory
+├── games/            # Main package directory
+│   ├── __init__.py   # Package initializer
 │   ├── main.py       # Main launcher with game menu
-│   ├── tictactoe.py  # Tic-Tac-Toe game
-│   ├── chess.py      # Chess game
+│   ├── tictactoe.py  # Tic-Tac-Toe game with AI and network multiplayer
+│   ├── chess.py      # Chess game with AI
 │   ├── sudoku.py     # Sudoku puzzle game
 │   └── adventure.py  # Text adventure game
 ├── setup.py          # Package configuration

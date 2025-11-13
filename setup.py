@@ -17,9 +17,9 @@ install_requires = read_requirements() or ["python-chess>=1.9.0"]
 
 setup(
     name="t-games",
-    version="1.0.1",
-    author="pavansai-tanguturi",
-    author_email="pavansaitanguturi@gmail.com",
+    version="1.0.5",
+    author="Pavan Sai Tanguturi, Siddartha Karumuri",
+    author_email="pavansaitanguturi@gmail.com, siddarthakarumuri003@gmail.com",
     description="A collection of classic games playable in your terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",

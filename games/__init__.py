@@ -4,8 +4,8 @@ A collection of classic games playable in your terminal.
 """
 
 __version__ = "1.0.0"
-__author__ = "Your Name"
-__email__ = "your.email@example.com"
+__author__ = "pavansai-atanguturi"
+__email__ = "pavansaitanguturi@gmail.com"
 
 from . import main
 from . import tictactoe
