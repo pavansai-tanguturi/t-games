@@ -1,11 +1,23 @@
 from setuptools import setup, find_packages
+import os
+
+def read_requirements():
+    """Read requirements from requirements.txt if it exists"""
+    requirements_path = os.path.join(os.path.dirname(__file__), 'requirements.txt')
+    if os.path.exists(requirements_path):
+        with open(requirements_path, 'r', encoding='utf-8') as f:
+            return [line.strip() for line in f if line.strip() and not line.startswith('#')]
+    return []
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+# Get requirements from requirements.txt, fallback to hardcoded list
+install_requires = read_requirements() or ["python-chess>=1.9.0"]
+
 setup(
     name="t-games",
-    version="1.0.0",
+    version="1.0.1",
     author="pavansai-tanguturi",
     author_email="pavansaitanguturi@gmail.com",
     description="A collection of classic games playable in your terminal",
@@ -27,9 +39,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.7",
-    install_requires=[
-        "python-chess>=1.9.0",
-    ],
+    install_requires=install_requires,
     entry_points={
         "console_scripts": [
             "games=games.main:main",
