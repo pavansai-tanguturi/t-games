@@ -221,6 +221,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **GitHub**: https://github.com/pavansai-tanguturi/t-games
 - **Issues**: https://github.com/pavansai-tanguturi/t-games/issues
 
+## 👥 Authors
+
+- **Pavan Sai Tanguturi** - [@pavansai-tanguturi](https://github.com/pavansai-tanguturi)
+- **Siddartha Karumuri** - [@siddardha003](https://github.com/siddardha003)
+
 ## 🎉 Have Fun!
 
 Enjoy playing these classic games in your terminal. Whether you're challenging the AI, playing with friends locally, or connecting globally via ngrok, there's something for everyone!
