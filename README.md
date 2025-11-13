@@ -36,38 +36,45 @@ A collection of classic games playable in your terminal, built with Python.
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Python 3.7 or higher
-- pip (Python package manager)
-
 ### Installation
 
-1. Clone or download this repository:
+Install the package using pip:
 ```bash
-cd t-games
+pip install t-games
 ```
 
-2. Install required dependencies:
-```bash
-pip install -r requirements.txt
-```
+That's it! All dependencies will be installed automatically.
 
 ### Running the Games
 
-#### Option 1: Main Menu (Recommended)
+#### Main Menu (Recommended)
 Launch the main menu to choose any game:
 ```bash
-python main.py
+games
 ```
 
-#### Option 2: Direct Game Launch
+#### Direct Game Launch
 Run individual games directly:
 ```bash
-python tictactoe.py
-python chess.py
-python sudoku.py
-python battleship.py
-python adventure.py
+tictactoe       # Tic-Tac-Toe
+chess-game      # Chess
+sudoku-game     # Sudoku
+adventure-game  # Text Adventure
+```
+
+### Development Installation
+
+If you want to contribute or run from source:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/pavansai-tanguturi/t-games.git
+cd t-games
+```
+
+2. Install in development mode:
+```bash
+pip install -e .
 ```
 
 ## 🎮 Game Instructions
@@ -154,10 +161,11 @@ python adventure.py
 
 ## 📋 Requirements
 
-- **Python Standard Library**: `os`, `sys`, `random`, `copy`, `socket`, `time`
-- **External Package**: `python-chess>=1.9.0` (for Chess game only)
+- **Python**: 3.7 or higher
+- **Dependencies**: Automatically installed with pip
+  - `python-chess>=1.9.0` (for Chess game)
 
-All dependencies are listed in `requirements.txt`
+All dependencies are managed automatically when you install via pip.
 
 ## 🎨 Features
 
@@ -179,23 +187,44 @@ All dependencies are listed in `requirements.txt`
 
 ```
 t-games/
-├── main.py           # Main launcher with game menu
-├── tictactoe.py      # Tic-Tac-Toe game
-├── chess.py          # Chess game
-├── sudoku.py         # Sudoku puzzle game
-├── battleship.py     # Battleship game
-├── adventure.py      # Text adventure game
+├── t-games/          # Main package directory
+│   ├── main.py       # Main launcher with game menu
+│   ├── tictactoe.py  # Tic-Tac-Toe game
+│   ├── chess.py      # Chess game
+│   ├── sudoku.py     # Sudoku puzzle game
+│   └── adventure.py  # Text adventure game
+├── setup.py          # Package configuration
+├── pyproject.toml    # Build configuration
 ├── requirements.txt  # Python dependencies
+├── LICENSE           # MIT License
 └── README.md         # This file
 ```
 
+## 📦 PyPI Package
+
+This project is published on PyPI: https://pypi.org/project/t-games/
+
+Install with: `pip install t-games`
+
 ## 🤝 Contributing
 
-Feel free to fork this project and add your own games or improvements!
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-game`)
+3. Commit your changes (`git commit -m 'Add amazing game'`)
+4. Push to the branch (`git push origin feature/amazing-game`)
+5. Open a Pull Request
 
 ## 📜 License
 
-This project is open source and available for educational and personal use.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- **PyPI**: https://pypi.org/project/t-games/
+- **GitHub**: https://github.com/pavansai-tanguturi/t-games
+- **Issues**: https://github.com/pavansai-tanguturi/t-games/issues
 
 ## 🎉 Have Fun!
 
