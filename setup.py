@@ -49,7 +49,7 @@ setup(
             "adventure-game=games.adventure:main",
         ],
     },
-    keywords="games terminal console multiplayer chess sudoku tictactoe battleship adventure",
+    keywords="games terminal console multiplayer chess sudoku tictactoe adventure",
     project_urls={
         "Bug Reports": "https://github.com/pavansai-tanguturi/t-games/issues",
         "Source": "https://github.com/pavansai-tanguturi/t-games",
